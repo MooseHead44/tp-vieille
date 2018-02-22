@@ -1,0 +1,29 @@
+{
+  "name": "tp-vieille",
+  "version": "1.0.0",
+  "description": "npm",
+  "main": "01_serveur_ejs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MooseHead44/tp-vieille.git"
+  },
+  "keywords": [
+    "express",
+    "mongo"
+  ],
+  "author": "Moose",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MooseHead44/tp-vieille/issues"
+  },
+  "homepage": "https://github.com/MooseHead44/tp-vieille#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mongodb": "^3.0.2"
+  }
+}

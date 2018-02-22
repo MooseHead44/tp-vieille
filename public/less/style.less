@@ -1,8 +1,8 @@
-@bleuFonce : #0097B2;
-@bleu : #C9E3E8;
-@orangeFonce : #B2580D;
-@orange : #FF8825;
-@orangePale : #FF9640;
+@grisFonce : #A9A9A9;
+@bleu : #0230BA;
+@noir : #000000;
+@vert : #00FF00;
+@gris : #E8E8E8;
 
 
 body {
@@ -19,7 +19,7 @@ body {
 		align-items: flex-end;
 		width: 90%;
 		padding: 0 55px;
-		border-bottom: 5px solid @bleuFonce;
+		border-bottom: 5px solid @grisFonce;
 
 		h1 {
 			margin-bottom: 0;
@@ -38,7 +38,7 @@ body {
 					list-style-type: none;
 
 					&:hover a {
-						color: @orange;
+						color: @vert;
 					}
 				}
 			}
@@ -49,12 +49,12 @@ body {
 		font-family: Open Sans;
 		font-weight: bold;
 		font-size: 45px;
-		color: @orangeFonce;
+		color: @noir;
 	}
 
 	a {
 		text-decoration: none;
-		color: @bleuFonce;
+		color: @grisFonce;
 		font-family: Open Sans;
 		font-weight: bold;
 		font-size: 22px;
@@ -62,46 +62,46 @@ body {
 	}
 
 	p {
-		color: @bleuFonce;
+		color: @grisFonce;
 		font-family: Open Sans;
 	}
 
 	form {
-		border: 3px solid @bleuFonce;
+		border: 3px solid @grisFonce;
 		font-family: Open Sans;
 		font-size: 20px;
 		padding: 50px;
-		color: @bleuFonce;
+		color: @grisFonce;
 
 		input[type='text'] {
 			font-family: Roboto;
 			font-size: 20px;
-			background-color: @orangePale;
+			background-color: @gris;
 			color: @bleu;
 			margin-bottom: 20px;
-			border: 2px solid @orange;
+			border: 2px solid @vert;
 		}
 
 		input[type='submit'] {
 			display: block;
 			background-color: @bleu;
-			border: 2px solid @bleuFonce;
+			border: 2px solid @grisFonce;
 			padding: 10px;
 			font-family: Open Sans;
 			font-size: 12px;
 			margin: 5px auto;
-			color: @orange;
+			color: @vert;
 			transition: all 0.3s;
 
 			&:hover {
-				color: @orangeFonce;
+				color: @noir;
 				padding: 15px;
 				margin: 0 auto;
 			}
 		}
 
 		input:focus {
-			border: 2px solid @orangeFonce;
+			border: 2px solid @noir;
 			outline: none;
 		}
 
@@ -113,10 +113,10 @@ body {
 
 	ul {
 		padding: 30px 60px;
-		border: 3px solid @orangeFonce;
+		border: 3px solid @noir;
 
 		li {
-			color: @orange;
+			color: @vert;
 			font-family: Roboto;
 			font-size: 20px;
 		}
@@ -132,18 +132,18 @@ body {
 	}
 
 	td, th {
-		border: 3px solid @bleuFonce;
+		border: 3px solid @grisFonce;
 		padding: 10px;
 		font-family: Roboto;
 		font-size: 20px;
 		text-align: center;
-		color: @orange;
+		color: @vert;
 		cursor: pointer;
 	}
 
 	td {
 		a {
-			color: @orangeFonce;
+			color: @noir;
 		}
 	}
 
