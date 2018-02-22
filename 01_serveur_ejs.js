@@ -49,9 +49,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/recherche', function (req, res) {
-
 	let cle = req.body.recherche
-
 	let cursor = db.collection('adresse').find({
 		$or: [
 			{"prenom": cle},
@@ -62,8 +60,6 @@ app.get('/recherche', function (req, res) {
 	}).toArray(function(err, res){
 		res.render('membres.ejs', {membres: resultat});
 	})
-
- 	
 })
 
 
