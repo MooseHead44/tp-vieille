@@ -1,1 +1,13 @@
-<h1>hello world!</h1>
+<table>
+	<% for (elm of membres) {%>
+		<tr>
+			<td><%= elm._id %></td>
+			<th contenteditable><%= elm.prenom %></th>
+			<th contenteditable><%= elm.nom %></th>
+			<td contenteditable><%= elm.telephone %></td>
+			<td contenteditable><%= elm.courriel %></td>
+			<td><a href="#" class="modifier"> Enregistrer (Modifier) </a></td>
+			<td><a href=http://localhost:8081/supprimer/<%= elm._id %> >Supprimer </a></td>
+		</tr>
+	<% } %>
+</table>

@@ -14,22 +14,12 @@ app.set('view engine', 'ejs'); // générateur de template
 
 
 app.get('/formulaire', function (req, res) {
- console.log(__dirname);
+ console.log(__dirnom);
  res.render('formulaire.ejs');
 
 })
 
 app.get('/membres', (req, res) => {
-	var cursor = db.collection('adresse').find().toArray(function(err, resultat){
-		 if (err) return console.log(err)
-		 console.log('util = ' + util.inspect(resultat));
-		 // transfert du contenu vers la vue gabarit.ejs (renders)
-		 // affiche le contenu de la BD
-		 res.render('membres.ejs', {membres: resultat})
-	})
-})
-
-app.get('/profil', (req, res) => {
 	var cursor = db.collection('adresse').find().toArray(function(err, resultat){
 		 if (err) return console.log(err)
 		 console.log('util = ' + util.inspect(resultat));
@@ -58,8 +48,7 @@ app.get('/recherche', function (req, res) {
 			{"courriel": cle}
 		]
 	}).toArray(function(err, res){
-		res.render('info.ejs');
-
+		res.render('membres.ejs');
 	})
 
 })
@@ -96,6 +85,17 @@ app.get('/ajouter', function (req, res) {
 		res.redirect('/membres')
 
 	})
+})
+
+
+app.get('/profil/:nom', function (req, res) {
+
+var nom = req.params.nom
+
+db.collection('adresse').find({"_id": ObjectID(req.params.nom)}, (err, resultat) => {
+
+	res.redirect('/profil/' + nom);
+
 })
 
 

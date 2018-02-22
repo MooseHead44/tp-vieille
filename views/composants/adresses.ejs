@@ -18,6 +18,7 @@
 					<th>
 						<a href=http://localhost:8081/ajouter> Ajouter </a>
 					</th>
+					<th></th>
 				</tr>
 			<% } %>
 		<% } %>
@@ -31,6 +32,7 @@
 				<td contenteditable><%= elm.courriel %></td>
 				<td><a href="#" class="modifier"> Enregistrer (Modifier) </a></td>
 				<td><a href=http://localhost:8081/supprimer/<%= elm._id %> >Supprimer </a></td>
+				<td><a href=http://localhost:8081/profil/<%= elm.nom%> >Profil</a></td>
 			</tr>
 		<% } %>
 </table>
@@ -42,7 +44,7 @@
 	<input type="hidden" name="courriel">
 </form>
 
-<form id="formRecherche" action="/recherche">
+<form id="formRecherche" action="/trier">
 	<input type="text" name="recherche" placeholder="Recherche"/>
 	<button type="submit">submit</button>
 </form>
