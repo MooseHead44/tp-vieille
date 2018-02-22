@@ -29,6 +29,16 @@ app.get('/membres', (req, res) => {
 	})
 })
 
+app.get('/profil', (req, res) => {
+	var cursor = db.collection('adresse').find().toArray(function(err, resultat){
+		 if (err) return console.log(err)
+		 console.log('util = ' + util.inspect(resultat));
+		 // transfert du contenu vers la vue gabarit.ejs (renders)
+		 // affiche le contenu de la BD
+		 res.render('membres.ejs', {membres: resultat})
+	})
+})
+
 
 app.get('/', (req, res) => {
 	console.log('accueil')
@@ -38,7 +48,23 @@ app.get('/', (req, res) => {
 
 
 
+app.get('/recherche', function (req, res) {
 
+	let cle = req.body.recherche
+
+	let cursor = db.collection('adresse').find({
+		$or: [
+			{"prenom": cle},
+			{"nom": cle},
+			{"telephone": cle},
+			{"courriel": cle}
+		]
+	}).toArray(function(err, res){
+		res.render('membres.ejs', {membres: resultat});
+	})
+
+ 	
+})
 
 
 
