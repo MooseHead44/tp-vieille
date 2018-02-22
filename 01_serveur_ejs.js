@@ -58,8 +58,10 @@ app.get('/recherche', function (req, res) {
 			{"courriel": cle}
 		]
 	}).toArray(function(err, res){
-		res.render('membres.ejs', {membres: resultat});
+		res.render('info.ejs');
+
 	})
+
 })
 
 

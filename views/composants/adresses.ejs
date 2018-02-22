@@ -41,6 +41,12 @@
 	<input type="hidden" name="telephone">
 	<input type="hidden" name="courriel">
 </form>
+
+<form id="formRecherche" action="/recherche">
+	<input type="text" name="recherche" placeholder="Recherche"/>
+	<button type="submit">submit</button>
+</form>
+
 <h1>Inscription membre</h1>
 <form action="http://127.0.0.1:8081/ajouter" method="GET">
 	Prénom:
@@ -51,8 +57,6 @@
 	<input type="text" name="telephone">
 	<br> Courriel:
 	<input type="text" name="courriel">
-	<br>
-	<input type="button" name="profil">
 	<br>
 	<input type="submit" value="Submit" class="bouton">
 </form>
